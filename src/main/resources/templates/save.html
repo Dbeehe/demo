@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<h2>save</h2>
+<form action="/save" method="post">
+    학번: <input type="text" name="studentNumber" placeholder="학번"><br>
+    이름: <input type="text" name="studentName" placeholder="이름"><br>
+    전화번호: <input type="text" name="studentMobile" placeholder="전화번호"><br>
+    <select name="studentMajor">
+        <option value="컴퓨터공학">컴퓨터공학</option>
+        <option value="전자공학">전자공학</option>
+        <option value="경영학">경영학</option>
+    </select><br>
+    <input type="submit" value="저장">
+</form>
+</body>
+</html>

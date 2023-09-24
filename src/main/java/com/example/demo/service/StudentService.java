@@ -56,6 +56,21 @@ public class StudentService {
         StudentEntity studentEntity = studentRepository.findById(id).orElseThrow(() -> new NoSuchElementException());
         return StudentDTO.toDTO(studentEntity);
     }
+
+    public void update(StudentDTO studentDTO) {
+        StudentEntity studentEntity = StudentEntity.toUpdateEntity(studentDTO);
+        /*
+            save() 에 넘기는 엔티티 객체에 pk값이 들어있으면 update 퀴리가 나가고
+            pk 값이 없으면 insert 퀴리가 나감
+         */
+        studentRepository.save(studentEntity);
+    }
+
+
+    public void delete(Long id) {
+
+
+    }
 }
 
 
